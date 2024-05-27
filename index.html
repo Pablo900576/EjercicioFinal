@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pou.css">
+    <script src="pou.js"></script>
+    <title>TU COLEGON EL POU</title>
+</head>
+<body onload="inicializarCosas()">
+    <h1 id="mascota">a</h1>
+    <div id="general">
+        <div id="monedas">Monedas: 0</div>
+        <div id="necesidades">
+            <div class="necesidad" id="hambre">Hambre: 100</div>
+            <div class="necesidad" id="limpieza">Limpieza: 100</div>
+            <div class="necesidad" id="felicidad">Felicidad: 100</div>
+            <div class="necesidad" id="energia">Energia: 100</div>
+        </div>
+        <img id="fotoPou" src="mascota.jpg">
+        <div id="acciones">
+            <button class="accion" id="comer" onclick="comer()">COMER</button>
+            <button class="accion" id="limpiar" onclick="limpiar()">LIMPIAR</button>
+            <button class="accion" id="jugar" onclick="jugar()">JUGAR</button>
+            <button class="accion" id="dormir" onclick="dormir()">DORMIR</button>
+        </div>
+        <button onclick="mostrarTienda()" id="tienda">TIENDA</button>
+        <div id="dentroTienda" style="display: none;">
+            <div id="comidas">
+                <h2>Comida</h2>
+                <div class="item" id="manzana" >
+                    <img src="tienda/manzana.png" id="fotoManzana" class="foto">
+                    <div id="nombre">Manzana</div>
+                    <div id="manzana1"></div>
+                    <button id="comprar" onclick="comprarManzana()">2 monedas</button>
+                </div>
+                <div class="item" id="pera" >
+                    <img src="tienda/pera.png" id="fotoPera" class="foto">
+                    <div id="nombre">Pera</div>
+                    <div id="pera1"></div>
+                    <button id="comprar" onclick="comprarPera()">3 monedas</button>
+                </div>
+                <div class="item" id="piña">
+                    <img src="tienda/piña.png" id="fotoPiña" class="foto">
+                    <div id="nombre">Piña</div>
+                    <div id="piña1"></div>
+                    <button id="comprar" onclick="comprarPiña()">4 monedas</button>
+                </div>
+                <div class="item" id="chocolate" >
+                    <img src="tienda/chocolate.png" id="fotoChocolate" class="foto">
+                    <div id="nombre">Chocolate</div>
+                    <div id="chocolate1"></div>
+                    <button id="comprar" onclick="comprarChocolate()">5 monedas</button>
+                </div>
+            </div>
+            
+            <div id="baños">
+                <h2>Baño</h2>
+                <div class="item" id="esponja" >
+                    <img src="tienda/esponja.png" id="fotoEsponja" class="foto">
+                    <div id="nombre">Esponja</div>
+                    <div id="esponja1"></div>
+                    <button id="comprar" onclick="comprarEsponja()">2 monedas</button>
+                </div>
+                <div class="item" id="champu" >
+                    <img src="tienda/champu.png" id="fotoChampu" class="foto">
+                    <div id="nombre">Champu</div>
+                    <div id="champu1"></div>
+                    <button id="comprar" onclick="comprarChampu()">3 monedas</button>
+                </div>
+                <div class="item" id="gel" >
+                    <img src="tienda/gel.png" id="fotoGel" class="foto">
+                    <div id="nombre">Gel</div>
+                    <div id="gel1"></div>
+                    <button id="comprar" onclick="comprarGel()">4 monedas</button>
+                </div>
+                <div class="item" id="agua" >
+                    <img src="tienda/agua.png" id="fotoAgua" class="foto">
+                    <div id="nombre">Agua</div>
+                    <div id="agua1"></div>
+                    <button id="comprar" onclick="comprarAgua()">5 monedas</button>
+                </div>
+            </div>
+            <div id="juguetes">
+                <h2>Juegos</h2>
+                <div class="item" id="pelota" >
+                    <img src="tienda/pelota.png" id="fotoPelota" class="foto">
+                    <div id="nombre">Pelota</div>
+                    <div id="pelota1"></div>
+                    <button id="comprar" onclick="comprarPelota()">2 monedas</button>
+                </div>
+                <div class="item" id="tele" >
+                    <img src="tienda/tele.png" id="fotoTele" class="foto">
+                    <div id="nombre">Tele</div>
+                    <div id="tele1"></div>
+                    <button id="comprar" onclick="comprarTele()">3 monedas</button>
+                </div>
+                <div class="item" id="musica" >
+                    <img src="tienda/musica.png" id="fotoMusica" class="foto">
+                    <div id="nombre">Musica</div>
+                    <div id="musica1"></div>
+                    <button id="comprar" onclick="comprarMusica()">4 monedas</button>
+                </div>
+                <div class="item" id="cartas" >
+                    <img src="tienda/cartas.png" id="fotoCartas" class="foto">
+                    <div id="nombre">Cartas</div>
+                    <div id="cartas1"></div>
+                    <button id="comprar" onclick="comprarCartas()">5 monedas</button>
+                </div>
+            </div>
+            <div id="camas">
+                <h2>Dormir</h2>
+                <div class="item" id="almohada" >
+                    <img src="tienda/almohada.png" id="fotoAlmohada" class="foto">
+                    <div id="nombre">Almohada</div>
+                    <div id="almohada1"></div>
+                    <button id="comprar" onclick="comprarAlmohada()">2 monedas</button>
+                </div>
+                <div class="item" id="pastilla" >
+                    <img src="tienda/pastillas.png" id="fotoPastilla" class="foto">
+                    <div id="nombre">Pastillas</div>
+                    <div id="pastilla1"></div>
+                    <button id="comprar" onclick="comprarPastilla()">3 monedas</button>
+                </div>
+                <div class="item" id="hamaca" >
+                    <img src="tienda/hamaca.png" id="fotoHamca" class="foto">
+                    <div id="nombre">Hamaca</div>
+                    <div id="hamaca1"></div>
+                    <button id="comprar" onclick="comprarHamaca()">4 monedas</button>
+                </div>
+                <div class="item" id="sabana">
+                    <img src="tienda/sabanas.png" id="fotoSabana" class="foto">
+                    <div id="sabana">Sabanas</div>
+                    <div id="sabana1"></div>
+                    <button id="comprar" onclick="comprarSabana()">5 monedas</button>
+                </div>
+            </div>
+            <button onclick="ocultarTienda()" id="tienda">CERRAR</button>
+        </div> 
+       
+    </div>
+    
+</body>
+</html>
