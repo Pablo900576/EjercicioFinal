@@ -8,7 +8,7 @@
     <title>TU COLEGON EL POU</title>
 </head>
 <body onload="inicializarCosas()">
-    <h1 id="mascota">a</h1>
+    <h1 id="mascota">Mascota</h1>
     <div id="general">
         <div id="monedas">Monedas: 0</div>
         <div id="necesidades">
@@ -137,7 +137,20 @@
             </div>
             <button onclick="ocultarTienda()" id="tienda">CERRAR</button>
         </div> 
-       
+        <button class="aspectos" id="mostrar" onclick="mostrarPersonalizacion()">PERSONALIZAR</button>
+        <div id="dentroAspectos" style="display: none;">
+            <div class="itemPers" id="clasico" onclick="volverEstandar()">
+                <img class="fotoPers" src="mascota/principal.png">
+            </div>
+            <div class="itemPers" id="gafas" onclick="ponerGafas()">
+                <img class="fotoPers" id="fotoGafas" src="mascota/gafas.png">
+            </div>
+            <div class="itemPers" id="gorro" onclick="ponerGorro()">
+                <img class="fotoPers" id="fotoGorro" src="mascota/GORRO.png">
+                <button class="comprarAspecto" id="comprarGorro">20 monedas</button>
+            </div>
+            <button class="aspectos" id="cerrar" onclick="ocultarPersonalizacion()">CERRAR</button>
+        </div>
     </div>
     
 </body>

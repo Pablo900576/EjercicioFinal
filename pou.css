@@ -46,7 +46,7 @@ body{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-42.5%,-50%);
 }
 
 #acciones{
@@ -121,6 +121,53 @@ body{
 }
 
 #fotoPou{
-    width: 100%;
+    width: 400px;
     height:auto;
+}
+
+
+.itemPers{
+    margin: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.itemPers img{
+    height: auto;
+    width: 100px;
+    margin: 0 auto;
+    display: block;
+}
+
+.aspectos{
+    position: absolute;
+    top: 10px;
+    left: 100px;
+    border-radius: 10px;
+    background-color:darkgray;
+
+}
+.aspectos:hover{
+    background-color: grey;
+    color: white;
+    cursor: pointer;
+}
+
+#dentroAspectos{
+    position: absolute;
+    top: 50px;
+    left: 80%;
+    transform: translate(-50%,0);
+}
+
+.comprarAspecto{
+    padding: 10px;
+    border-radius: 10px;
+    background-color: gold;
+    cursor: pointer;
+}
+
+.comprarAspecto:hover{
+    background-color: red;
+    color: white;
 }

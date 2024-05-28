@@ -426,246 +426,267 @@ function ocultarTienda() {
     document.getElementById('dentroTienda').style.display = 'none';
 }
 
+// comprar
+    function comprarManzana(){
+        if(monedas>=2){
+            monedas-=2;
+            manzana++;
+            comida=manzana+pera+piña+chocolate;
+            if(manzana>1 || manzana==0){
+            document.getElementById('manzana1').innerHTML="Tienes "+manzana+" manzanas.";
+            }else{
+                document.getElementById('manzana1').innerHTML="Tienes "+manzana+" manzana.";
+            }
+            document.getElementById('monedas').innerHTML ='Monedas: '+ monedas;
+        }else{
+            alert('No tienes el suficiente dinero como para comprar una manzana.')
+        }
+    }
+    function comprarPera(){
+        if(monedas>=3){
+            monedas-=3;
+            pera++;
+            comida=manzana+pera+piña+chocolate;
+            if(pera>1 || pera==0){
+            document.getElementById('pera1').innerHTML="Tienes "+pera+" peras.";
+            }else{
+                document.getElementById('pera1').innerHTML="Tienes "+pera+" pera.";
+            }
+            document.getElementById('monedas').innerHTML ='Monedas: '+ monedas;
+        }else{
+            alert('No tienes el suficiente dinero como para comprar una pera.')
+        }
+    }
+    function comprarPiña(){
+        if(monedas>=4){
+            monedas-=4;
+            piña++;
+            comida=manzana+pera+piña+chocolate;
+            if(piña>1 || piña==0){
+            document.getElementById('piña1').innerHTML="Tienes "+piña+" piñas.";
+            }else{
+                document.getElementById('piña1').innerHTML="Tienes "+piña+" piña.";
+            }
+            document.getElementById('monedas').innerHTML ='Monedas: '+ monedas;
+        }else{
+            alert('No tienes el suficiente dinero como para comprar una piña.')
+        }
+    }
+    function comprarChocolate(){
+        if(monedas>=5){
+            monedas-=5;
+            chocolate++;
+            comida=manzana+pera+piña+chocolate;
+            if(chocolate>1 || chocolate==0){
+            document.getElementById('chocolate1').innerHTML="Tienes "+chocolate+" chocolates.";
+            }else{
+                document.getElementById('chocolate1').innerHTML="Tienes "+chocolate+" chocolate.";
+            }
+            document.getElementById('monedas').innerHTML ='Monedas: '+ monedas;
+        }else{
+            alert('No tienes el suficiente dinero como para comprar una chocolate.')
+        }
+    }
+    function comprarEsponja(){
+        if(monedas>=2){
+            monedas-=2;
+            esponja++;
+            baño=agua+gel+champu+esponja;
+            if(esponja>1 || esponja==0){
+            document.getElementById('esponja1').innerHTML="Tienes "+esponja+" esponjas.";
+            }else{
+                document.getElementById('esponja1').innerHTML="Tienes "+esponja+" esponja.";
+            }
+            document.getElementById('monedas').innerHTML ='Monedas: '+ monedas;
+        }else{
+            alert('No tienes el suficiente dinero como para comprar una esponja.')
+        }
+    }
+    function comprarChampu(){
+        if(monedas>=3){
+            monedas-=3;
+            champu++;
+            baño=agua+gel+champu+esponja;
+            if(champu>1 || champu==0){
+            document.getElementById('champu1').innerHTML="Tienes "+champu+" champus.";
+            }else{
+                document.getElementById('champu1').innerHTML="Tienes "+champu+" champu.";
+            }
+            document.getElementById('monedas').innerHTML ='Monedas: '+ monedas;
+        }else{
+            alert('No tienes el suficiente dinero como para comprar un champu.')
+        }
+    }
+    function comprarGel(){
+        if(monedas>=4){
+            monedas-=4;
+            gel++;
+            baño=agua+gel+champu+esponja;
+            if(gel>1 || gel==0){
+            document.getElementById('gel1').innerHTML="Tienes "+gel+" geles.";
+            }else{
+                document.getElementById('gel1').innerHTML="Tienes "+gel+" gel.";
+            }
+            document.getElementById('monedas').innerHTML ='Monedas: '+ monedas;
+        }else{
+            alert('No tienes el suficiente dinero como para comprar un gel.')
+        }
+    }
+    function comprarAgua(){
+        if(monedas>5){
+            monedas-=5;
+            agua++;
+            baño=agua+gel+champu+esponja;
+            if(agua>1 || agua==0){
+            document.getElementById('agua1').innerHTML="Tienes "+agua+" aguas.";
+            }else{
+                document.getElementById('agua1').innerHTML="Tienes "+agua+" agua.";
+            }
+            document.getElementById('monedas').innerHTML ='Monedas: '+ monedas;
+        }else{
+            alert('No tienes el suficiente dinero como para comprar una agua.')
+        }
+    }
+    function comprarPelota(){
+        if(monedas>2){
+            monedas-=2;
+            pelota++;
+            juegos= cartas+musica+tele+pelota;
+            if(pelota>1 || pelota==0){
+            document.getElementById('pelota1').innerHTML="Tienes "+pelota+" pelotas.";
+            }else{
+                document.getElementById('pelota1').innerHTML="Tienes "+pelota+" pelota.";
+            }
+            document.getElementById('monedas').innerHTML ='Monedas: '+ monedas;
+        }else{
+            alert('No tienes el suficiente dinero como para comprar una pelota.')
+        }
+    }
+    function comprarTele(){
+        if(monedas>3){
+            monedas-=3;
+            tele++;
+            juegos= cartas+musica+tele+pelota;
+            if(tele>1 || tele==0){
+            document.getElementById('tele1').innerHTML="Tienes "+tele+" teles.";
+            }else{
+                document.getElementById('tele1').innerHTML="Tienes "+tele+" tele.";
+            }
+            document.getElementById('monedas').innerHTML ='Monedas: '+ monedas;
+        }else{
+            alert('No tienes el suficiente dinero como para comprar una tele.')
+        }
+    }
+    function comprarMusica(){
+        if(monedas>4){
+            monedas-=4;
+            musica++;
+            juegos= cartas+musica+tele+pelota;
+            if(musica>1 || musica ==0){
+            document.getElementById('musica1').innerHTML="Tienes "+musica+" musicas.";
+            }else{
+                document.getElementById('musica1').innerHTML="Tienes "+musica+" musica.";
+            }
+            document.getElementById('monedas').innerHTML ='Monedas: '+ monedas;
+        }else{
+            alert('No tienes el suficiente dinero como para comprar una musica.')
+        }
+    }
+    function comprarCartas(){
+        if(monedas>5){
+            monedas-=5;
+            cartas++;
+            juegos= cartas+musica+tele+pelota;
+            if(cartas>1 || cartas==0){
+            document.getElementById('cartas1').innerHTML="Tienes "+cartas+" paquetes de cartas.";
+            }else{
+                document.getElementById('cartas1').innerHTML="Tienes "+cartas+" paquete de cartas.";
+            }
+            document.getElementById('monedas').innerHTML ='Monedas: '+ monedas;
+        }else{
+            alert('No tienes el suficiente dinero como para comprar un paquete de cartas.')
+        }
+    }
+    function comprarAlmohada(){
+        if(monedas>2){
+            monedas-=2;
+            almohada++;
+            cama= almohada+pastilla+hamaca+sabana;
+            if(almohada>1 || almohada==0){
+            document.getElementById('almohada1').innerHTML="Tienes "+almohada+" almohadas.";
+            }else{
+                document.getElementById('almohada1').innerHTML="Tienes "+almohada+" almohada.";
+            }
+            document.getElementById('monedas').innerHTML ='Monedas: '+ monedas;
+        }else{
+            alert('No tienes el suficiente dinero como para comprar una almohada.')
+        }
+    }
+    function comprarPastilla(){
+        if(monedas>3){
+            monedas-=3;
+            pastilla++;
+            cama= almohada+pastilla+hamaca+sabana;
+            if(pastilla>1 || pastilla==0){
+            document.getElementById('pastilla1').innerHTML="Tienes "+pastilla+" pastillas.";
+            }else{
+                document.getElementById('pastilla1').innerHTML="Tienes "+pastilla+" pastilla.";
+            }
+            document.getElementById('monedas').innerHTML ='Monedas: '+ monedas;
+        }else{
+            alert('No tienes el suficiente dinero como para comprar una pastilla.')
+        }
+    }
+    function comprarHamaca(){
+        if(monedas>4){
+            monedas-=4;
+            hamaca++;
+            cama= almohada+pastilla+hamaca+sabana;
+            if(hamaca>1 || hamaca==0){
+            document.getElementById('hamaca1').innerHTML="Tienes "+hamaca+" hamacas.";
+            }else{
+                document.getElementById('hamaca1').innerHTML="Tienes "+hamaca+" hamaca.";
+            }
+            document.getElementById('monedas').innerHTML ='Monedas: '+ monedas;
+        }else{
+            alert('No tienes el suficiente dinero como para comprar una hamaca.')
+        }
+    }
+    function comprarSabana(){
+        if(monedas>5){
+            monedas-=5;
+            sabana++;
+            cama= almohada+pastilla+hamaca+sabana;
+            if(sabana>1 || sabana==0){
+            document.getElementById('sabana1').innerHTML="Tienes "+sabana+" sabanas.";
+            }else{
+                document.getElementById('sabana1').innerHTML="Tienes "+sabana+" sabana.";
+            }
+            document.getElementById('monedas').innerHTML ='Monedas: '+ monedas;
+        }else{
+            alert('No tienes el suficiente dinero como para comprar una sabana.')
+        }
+    }
 
 
-function comprarManzana(){
-    if(monedas>=2){
-        monedas-=2;
-        manzana++;
-        comida=manzana+pera+piña+chocolate;
-        if(manzana>1 || manzana==0){
-        document.getElementById('manzana1').innerHTML="Tienes "+manzana+" manzanas.";
-        }else{
-            document.getElementById('manzana1').innerHTML="Tienes "+manzana+" manzana.";
-        }
-        document.getElementById('monedas').innerHTML ='Monedas: '+ monedas;
-    }else{
-        alert('No tienes el suficiente dinero como para comprar una manzana.')
-    }
+
+
+//// personalizacion
+
+function mostrarPersonalizacion(){
+    document.getElementById('dentroAspectos').style.display='block';
+    document.getElementById('mostrar').style.display='none';
+    document.getElementById('dentroAspectos').style.backgroundColor='white';
+    document.getElementById('dentroAspectos').style.width= '300px';
+    document.getElementById('dentroAspectos').style.border= 'solid 1px black';
+    document.getElementById('dentroAspectos').style.borderRadius= '10px';
+    document.getElementById('dentroAspectos').style.textAlign= 'center';
+    document.getElementById('dentroAspectos').style.padding= '10px';
 }
-function comprarPera(){
-    if(monedas>=3){
-        monedas-=3;
-        pera++;
-        comida=manzana+pera+piña+chocolate;
-        if(pera>1 || pera==0){
-        document.getElementById('pera1').innerHTML="Tienes "+pera+" peras.";
-        }else{
-            document.getElementById('pera1').innerHTML="Tienes "+pera+" pera.";
-        }
-        document.getElementById('monedas').innerHTML ='Monedas: '+ monedas;
-    }else{
-        alert('No tienes el suficiente dinero como para comprar una pera.')
-    }
+
+function ocultarPersonalizacion(){
+    document.getElementById('dentroAspectos').style.display='none';
+    document.getElementById('mostrar').style.display='block';
 }
-function comprarPiña(){
-    if(monedas>=4){
-        monedas-=4;
-        piña++;
-        comida=manzana+pera+piña+chocolate;
-        if(piña>1 || piña==0){
-        document.getElementById('piña1').innerHTML="Tienes "+piña+" piñas.";
-        }else{
-            document.getElementById('piña1').innerHTML="Tienes "+piña+" piña.";
-        }
-        document.getElementById('monedas').innerHTML ='Monedas: '+ monedas;
-    }else{
-        alert('No tienes el suficiente dinero como para comprar una piña.')
-    }
-}
-function comprarChocolate(){
-    if(monedas>=5){
-        monedas-=5;
-        chocolate++;
-        comida=manzana+pera+piña+chocolate;
-        if(chocolate>1 || chocolate==0){
-        document.getElementById('chocolate1').innerHTML="Tienes "+chocolate+" chocolates.";
-        }else{
-            document.getElementById('chocolate1').innerHTML="Tienes "+chocolate+" chocolate.";
-        }
-        document.getElementById('monedas').innerHTML ='Monedas: '+ monedas;
-    }else{
-        alert('No tienes el suficiente dinero como para comprar una chocolate.')
-    }
-}
-function comprarEsponja(){
-    if(monedas>=2){
-        monedas-=2;
-        esponja++;
-        baño=agua+gel+champu+esponja;
-        if(esponja>1 || esponja==0){
-        document.getElementById('esponja1').innerHTML="Tienes "+esponja+" esponjas.";
-        }else{
-            document.getElementById('esponja1').innerHTML="Tienes "+esponja+" esponja.";
-        }
-        document.getElementById('monedas').innerHTML ='Monedas: '+ monedas;
-    }else{
-        alert('No tienes el suficiente dinero como para comprar una esponja.')
-    }
-}
-function comprarChampu(){
-    if(monedas>=3){
-        monedas-=3;
-        champu++;
-        baño=agua+gel+champu+esponja;
-        if(champu>1 || champu==0){
-        document.getElementById('champu1').innerHTML="Tienes "+champu+" champus.";
-        }else{
-            document.getElementById('champu1').innerHTML="Tienes "+champu+" champu.";
-        }
-        document.getElementById('monedas').innerHTML ='Monedas: '+ monedas;
-    }else{
-        alert('No tienes el suficiente dinero como para comprar un champu.')
-    }
-}
-function comprarGel(){
-    if(monedas>=4){
-        monedas-=4;
-        gel++;
-        baño=agua+gel+champu+esponja;
-        if(gel>1 || gel==0){
-        document.getElementById('gel1').innerHTML="Tienes "+gel+" geles.";
-        }else{
-            document.getElementById('gel1').innerHTML="Tienes "+gel+" gel.";
-        }
-        document.getElementById('monedas').innerHTML ='Monedas: '+ monedas;
-    }else{
-        alert('No tienes el suficiente dinero como para comprar un gel.')
-    }
-}
-function comprarAgua(){
-    if(monedas>5){
-        monedas-=5;
-        agua++;
-        baño=agua+gel+champu+esponja;
-        if(agua>1 || agua==0){
-        document.getElementById('agua1').innerHTML="Tienes "+agua+" aguas.";
-        }else{
-            document.getElementById('agua1').innerHTML="Tienes "+agua+" agua.";
-        }
-        document.getElementById('monedas').innerHTML ='Monedas: '+ monedas;
-    }else{
-        alert('No tienes el suficiente dinero como para comprar una agua.')
-    }
-}
-function comprarPelota(){
-    if(monedas>2){
-        monedas-=2;
-        pelota++;
-        juegos= cartas+musica+tele+pelota;
-        if(pelota>1 || pelota==0){
-        document.getElementById('pelota1').innerHTML="Tienes "+pelota+" pelotas.";
-        }else{
-            document.getElementById('pelota1').innerHTML="Tienes "+pelota+" pelota.";
-        }
-        document.getElementById('monedas').innerHTML ='Monedas: '+ monedas;
-    }else{
-        alert('No tienes el suficiente dinero como para comprar una pelota.')
-    }
-}
-function comprarTele(){
-    if(monedas>3){
-        monedas-=3;
-        tele++;
-        juegos= cartas+musica+tele+pelota;
-        if(tele>1 || tele==0){
-        document.getElementById('tele1').innerHTML="Tienes "+tele+" teles.";
-        }else{
-            document.getElementById('tele1').innerHTML="Tienes "+tele+" tele.";
-        }
-        document.getElementById('monedas').innerHTML ='Monedas: '+ monedas;
-    }else{
-        alert('No tienes el suficiente dinero como para comprar una tele.')
-    }
-}
-function comprarMusica(){
-    if(monedas>4){
-        monedas-=4;
-        musica++;
-        juegos= cartas+musica+tele+pelota;
-        if(musica>1 || musica ==0){
-        document.getElementById('musica1').innerHTML="Tienes "+musica+" musicas.";
-        }else{
-            document.getElementById('musica1').innerHTML="Tienes "+musica+" musica.";
-        }
-        document.getElementById('monedas').innerHTML ='Monedas: '+ monedas;
-    }else{
-        alert('No tienes el suficiente dinero como para comprar una musica.')
-    }
-}
-function comprarCartas(){
-    if(monedas>5){
-        monedas-=5;
-        cartas++;
-        juegos= cartas+musica+tele+pelota;
-        if(cartas>1 || cartas==0){
-        document.getElementById('cartas1').innerHTML="Tienes "+cartas+" paquetes de cartas.";
-        }else{
-            document.getElementById('cartas1').innerHTML="Tienes "+cartas+" paquete de cartas.";
-        }
-        document.getElementById('monedas').innerHTML ='Monedas: '+ monedas;
-    }else{
-        alert('No tienes el suficiente dinero como para comprar un paquete de cartas.')
-    }
-}
-function comprarAlmohada(){
-    if(monedas>2){
-        monedas-=2;
-        almohada++;
-        cama= almohada+pastilla+hamaca+sabana;
-        if(almohada>1 || almohada==0){
-        document.getElementById('almohada1').innerHTML="Tienes "+almohada+" almohadas.";
-        }else{
-            document.getElementById('almohada1').innerHTML="Tienes "+almohada+" almohada.";
-        }
-        document.getElementById('monedas').innerHTML ='Monedas: '+ monedas;
-    }else{
-        alert('No tienes el suficiente dinero como para comprar una almohada.')
-    }
-}
-function comprarPastilla(){
-    if(monedas>3){
-        monedas-=3;
-        pastilla++;
-        cama= almohada+pastilla+hamaca+sabana;
-        if(pastilla>1 || pastilla==0){
-        document.getElementById('pastilla1').innerHTML="Tienes "+pastilla+" pastillas.";
-        }else{
-            document.getElementById('pastilla1').innerHTML="Tienes "+pastilla+" pastilla.";
-        }
-        document.getElementById('monedas').innerHTML ='Monedas: '+ monedas;
-    }else{
-        alert('No tienes el suficiente dinero como para comprar una pastilla.')
-    }
-}
-function comprarHamaca(){
-    if(monedas>4){
-        monedas-=4;
-        hamaca++;
-        cama= almohada+pastilla+hamaca+sabana;
-        if(hamaca>1 || hamaca==0){
-        document.getElementById('hamaca1').innerHTML="Tienes "+hamaca+" hamacas.";
-        }else{
-            document.getElementById('hamaca1').innerHTML="Tienes "+hamaca+" hamaca.";
-        }
-        document.getElementById('monedas').innerHTML ='Monedas: '+ monedas;
-    }else{
-        alert('No tienes el suficiente dinero como para comprar una hamaca.')
-    }
-}
-function comprarSabana(){
-    if(monedas>5){
-        monedas-=5;
-        sabana++;
-        cama= almohada+pastilla+hamaca+sabana;
-        if(sabana>1 || sabana==0){
-        document.getElementById('sabana1').innerHTML="Tienes "+sabana+" sabanas.";
-        }else{
-            document.getElementById('sabana1').innerHTML="Tienes "+sabana+" sabana.";
-        }
-        document.getElementById('monedas').innerHTML ='Monedas: '+ monedas;
-    }else{
-        alert('No tienes el suficiente dinero como para comprar una sabana.')
-    }
-}
+
 
