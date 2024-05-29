@@ -54,7 +54,10 @@ body{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-42.5%,-50%);
+    transform: translate(-42.5%,-50%);    
+    width: auto;
+    height:45%;
+    
 }
 
 #acciones{
@@ -129,10 +132,7 @@ body{
     height: 100px;
 }
 
-#fotoPou{
-    width: auto;
-    height:45%;
-}
+
 
 
 .itemPers{
@@ -169,15 +169,36 @@ body{
     transform: translate(-50%,0);
 
 }
+h2{
+    font-size: 30px;
+}
+#nombre{
+    font-size: 20px;
+    font-style: italic;
+}
 
-.comprarAspecto{
+.comprarAspecto, #comprar{
     padding: 10px;
     border-radius: 10px;
     background-color: gold;
     cursor: pointer;
 }
 
-.comprarAspecto:hover{
+.comprarAspecto:hover, #comprar:hover{
     background-color: red;
+    color: white;
+}
+
+#cambiarNombre{
+    border-radius: 5px;
+    background-color:pink;
+    color: black;
+    cursor: pointer;
+    position: absolute;
+    top: 80%;
+}
+
+#cambiarNombre:hover{
+    background-color:deeppink;
     color: white;
 }
