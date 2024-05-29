@@ -1,6 +1,6 @@
-var hambre=100;
-var limpieza=100;
-var felicidad=100;
+var hambre=50;
+var limpieza=50;
+var felicidad=50;
 var energia=100;
 var monedas=1000;
 var porSegundo=2;
@@ -39,6 +39,10 @@ function dinero(){
 
 
 function inicializarCosas(){
+    comerFoto();
+    limpiarFoto();
+    dormirFoto();
+    jugarFoto();
     document.getElementById('hambre').innerHTML='Hambre: '+hambre;
     document.getElementById('limpieza').innerHTML='Limpieza: '+limpieza;
     document.getElementById('felicidad').innerHTML='Felicidad: '+felicidad;
@@ -677,16 +681,209 @@ function mostrarPersonalizacion(){
     document.getElementById('dentroAspectos').style.display='block';
     document.getElementById('mostrar').style.display='none';
     document.getElementById('dentroAspectos').style.backgroundColor='white';
-    document.getElementById('dentroAspectos').style.width= '300px';
     document.getElementById('dentroAspectos').style.border= 'solid 1px black';
     document.getElementById('dentroAspectos').style.borderRadius= '10px';
     document.getElementById('dentroAspectos').style.textAlign= 'center';
     document.getElementById('dentroAspectos').style.padding= '10px';
 }
-
 function ocultarPersonalizacion(){
     document.getElementById('dentroAspectos').style.display='none';
     document.getElementById('mostrar').style.display='block';
 }
+
+const imagenPou = document.getElementById('fotoPou')
+
+const equipado='Desequipar';
+const comprado='Equipar';
+var gafas=0;
+
+function comprarGafas(){
+    if (gorro==2){
+        if (gafas==1){
+            equiparGorroGafas();
+            document.getElementById('comprarGafas').textContent=equipado;
+            document.getElementById('clasico').textContent=comprado;
+            gafas=2;
+        }else if(gafas==2){
+            document.getElementById('comprarGafas').textContent=comprado;
+            desequiparGafasGorro();
+            gafas=1;
+        }else if(monedas>=15){
+            monedas-=15;
+            document.getElementById('monedas').innerHTML ='Monedas: '+ monedas;
+            document.getElementById('comprarGafas').textContent=comprado;
+            gafas=1;
+            
+        }
+    }else{
+    if (gafas==1){
+        equiparGafas();
+        document.getElementById('comprarGafas').textContent=equipado;
+        document.getElementById('clasico').textContent=comprado;
+        gafas=2;
+    }else if(gafas==2){
+        document.getElementById('comprarGafas').textContent=comprado;
+        desequiparGafas();
+        gafas=1;
+    }else if(monedas>=15){
+        monedas-=15;
+        document.getElementById('monedas').innerHTML ='Monedas: '+ monedas;
+        document.getElementById('comprarGafas').textContent=comprado;
+        gafas=1;
+        
+    }
+}
+}
+
+
+function equiparGafas(){
+    document.getElementById('fotoPou').src=document.getElementById('principalGafas').src;
+
+}
+
+function desequiparGafas(){
+    document.getElementById('fotoPou').src=document.getElementById('principal').src;
+}
+
+
+function comprarGorro(){
+    document.getElementById('fotoPou').src
+}
+
+
+var gorro=0;
+
+function comprarGorro(){
+    if(gafas==2){
+        if (gorro==1){
+            equiparGorroGafas();
+            document.getElementById('comprarGorro').textContent=equipado;
+            document.getElementById('clasico').textContent=comprado;
+            gorro=2;
+        }else if(gorro==2){
+            document.getElementById('comprarGorro').textContent=comprado;
+            desequiparGorroGafas();
+            gorro=1;
+        }else if(monedas>=15){
+            monedas-=15;
+            document.getElementById('monedas').innerHTML ='Monedas: '+ monedas;
+            document.getElementById('comprarGorro').textContent=comprado;
+            gorro=1;
+            
+        }
+    }else{
+        if (gorro==1){
+            equiparGorro();
+            document.getElementById('comprarGorro').textContent=equipado;
+            document.getElementById('clasico').textContent=comprado;
+            gorro=2;
+        }else if(gorro==2){
+            document.getElementById('comprarGorro').textContent=comprado;
+            desequiparGorro();
+            gorro=1;
+        }else if(monedas>=15){
+            monedas-=15;
+            document.getElementById('monedas').innerHTML ='Monedas: '+ monedas;
+            document.getElementById('comprarGorro').textContent=comprado;
+            gorro=1;
+            
+        }
+    }
+}
+
+function equiparGorro(){
+
+    document.getElementById('fotoPou').src= document.getElementById('principalGorro').src;
+}
+
+function desequiparGorro(){
+    document.getElementById('fotoPou').src=document.getElementById('principal').src;
+}
+function desequiparGorroGafas(){
+    document.getElementById('fotoPou').src=document.getElementById('principalGafas').src;
+}
+
+function equiparGorroGafas(){
+    document.getElementById('fotoPou').src=document.getElementById('principalGorroGafas').src;
+}
+
+function desequiparGafasGorro(){
+    document.getElementById('fotoPou').src=document.getElementById('principalGorro').src;
+}
+
+const principal = "Equipado";
+
+function volverPrincipal(){
+    document.getElementById('fotoPou').src=document.getElementById('principal').src;
+    if(gafas>0){
+        document.getElementById('comprarGafas').textContent=comprado;
+        gafas=1;
+    }
+    if(gorro>0){
+        document.getElementById('comprarGorro').textContent=comprado;
+        gorro=1;
+    }
+    document.getElementById('clasico').textContent=principal;
+}
+
+
+function comerFoto(){
+    if(gafas<2 && gorro<2){
+        document.getElementById('comer').addEventListener('click', function() {
+            document.getElementById('fotoPou').src = document.getElementById('comerPrincipal').src;
+            setTimeout(function() {
+            document.getElementById('fotoPou').src = document.getElementById('principal').src;
+        }, 1000);
+    });
+    }else if(gafas==2){
+        document.getElementById('comer').addEventListener('click', function() {
+        document.getElementById('fotoPou').src = document.getElementById('comerGafas').src;
+        setTimeout(function() {
+        document.getElementById('fotoPou').src = document.getElementById('principalGafas').src;
+        }, 1000);
+    });
+    }else if(gorro==2){
+        document.getElementById('comer').addEventListener('click', function() {
+            document.getElementById('fotoPou').src = document.getElementById('comerGorro').src;
+            setTimeout(function() {
+            document.getElementById('fotoPou').src = document.getElementById('principalGorro').src;
+        }, 1000);
+    });
+    }else if(gorro==2 && gafas==2){
+        document.getElementById('comer').addEventListener('click', function() {
+            document.getElementById('fotoPou').src = document.getElementById('comerGafasGorro').src;
+            setTimeout(function() {
+            document.getElementById('fotoPou').src = document.getElementById('principalGorroGafas').src;
+        }, 1000);
+    });
+    }
+}
+
+function limpiarFoto(){
+    document.getElementById('limpiar').addEventListener('click', function() {
+    document.getElementById('fotoPou').src = document.getElementById('limpiarPrincipal').src;
+    setTimeout(function() {
+        document.getElementById('fotoPou').src = document.getElementById('principal').src;
+    }, 1000);
+});
+}
+function jugarFoto(){
+    document.getElementById('jugar').addEventListener('click', function() {
+    document.getElementById('fotoPou').src = document.getElementById('jugarPrincipal').src;
+    setTimeout(function() {
+        document.getElementById('fotoPou').src = document.getElementById('principal').src;
+    }, 1000);
+});
+}
+function dormirFoto(){
+    document.getElementById('dormir').addEventListener('click', function() {
+    document.getElementById('fotoPou').src = document.getElementById('dormirPrincipal').src;
+    setTimeout(function() {
+        document.getElementById('fotoPou').src = document.getElementById('principal').src;
+    }, 1000);
+});
+}
+
+
 
 

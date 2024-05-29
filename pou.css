@@ -2,6 +2,10 @@ body{
     background-color: beige;
 }
 
+#general{
+    width: 100%;
+}
+
 #mascota{
     display: flex;
     justify-content: center;
@@ -15,6 +19,10 @@ body{
 #necesidades{
     justify-content: center;
     display: flex;
+    width: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
 }
 #tienda{
     position: absolute;
@@ -56,6 +64,7 @@ body{
     top: 80%;
     left: 50%;
     transform: translate(-50%);
+    width: 50%;
 }
 .accion{
     margin: 10px;
@@ -121,8 +130,8 @@ body{
 }
 
 #fotoPou{
-    width: 400px;
-    height:auto;
+    width: auto;
+    height:45%;
 }
 
 
@@ -133,8 +142,8 @@ body{
 }
 
 .itemPers img{
-    height: auto;
-    width: 100px;
+    height: 100px;
+    width: auto;
     margin: 0 auto;
     display: block;
 }
@@ -155,9 +164,10 @@ body{
 
 #dentroAspectos{
     position: absolute;
-    top: 50px;
+    top: 70px;
     left: 80%;
     transform: translate(-50%,0);
+
 }
 
 .comprarAspecto{

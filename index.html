@@ -139,19 +139,35 @@
         </div> 
         <button class="aspectos" id="mostrar" onclick="mostrarPersonalizacion()">PERSONALIZAR</button>
         <div id="dentroAspectos" style="display: none;">
-            <div class="itemPers" id="clasico" onclick="volverEstandar()">
+            <div class="itemPers" id="clasicoGeneral">
                 <img class="fotoPers" src="mascota/principal.png">
+                Clasico
+                <button class="comprarAspecto" id="clasico"  onclick="volverPrincipal()">Equipado</button>
             </div>
-            <div class="itemPers" id="gafas" onclick="ponerGafas()">
+            <div class="itemPers" id="gafas" >
                 <img class="fotoPers" id="fotoGafas" src="mascota/gafas.png">
+                Gafas
+                <button class="comprarAspecto" id="comprarGafas" onclick="comprarGafas()">15 monedas</button>
             </div>
-            <div class="itemPers" id="gorro" onclick="ponerGorro()">
+            <div class="itemPers" id="gorro" >
                 <img class="fotoPers" id="fotoGorro" src="mascota/GORRO.png">
-                <button class="comprarAspecto" id="comprarGorro">20 monedas</button>
+                Gorro
+                <button class="comprarAspecto" id="comprarGorro" onclick="comprarGorro()">20 monedas</button>
             </div>
             <button class="aspectos" id="cerrar" onclick="ocultarPersonalizacion()">CERRAR</button>
         </div>
     </div>
     
-</body>
+    <img src="mascota/41.png" id="principalGafas" style="display: none;">
+    <img src="mascota/principal.png" id="principal" style="display: none;">
+    <img src= "mascota/42.png" id="principalGorro" style="display: none;">
+    <img src="mascota/3.png" id="comerPrincipal" style="display: none;">
+    <img src="mascota/412.png" id="principalGorroGafas" style="display: none;">
+    <img src="mascota/1.png" id="limpiarPrincipal" style="display: none;">
+    <img src="mascota/2.png" id="jugarPrincipal" style="display: none;">
+    <img src="mascota/5.png" id="dormirPrincipal" style="display: none;">
+    <img src="mascota/31.png" id="comerGafas" style="display: none;">
+    <img src="mascota/32.png" id="comerGorro" style="display: none;">
+    <img src="mascota/312.png" id="comerGafasGorro" style="display: none;">
+</body> 
 </html>
