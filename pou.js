@@ -2,8 +2,8 @@ var hambre=50;
 var limpieza=50;
 var felicidad=50;
 var energia=100;
-var monedas=1000;
-var porSegundo=2;
+var monedas=10;
+var porSegundo=1;
 
 var comida=manzana+pera+piña+chocolate;
 var baño=agua+gel+champu+esponja;
@@ -43,7 +43,7 @@ function dinero(){
                 monedas++;
                 document.getElementById('monedas').innerHTML ='Monedas: '+ monedas;
             }
-        }, 1000);
+        }, 2000);
 } 
 
 
